@@ -1,1 +1,6 @@
-pandas numpy scikit-learn xgboost
+requirements.txt
+streamlit
+pandas
+numpy
+xgboost
+scikit-learn
