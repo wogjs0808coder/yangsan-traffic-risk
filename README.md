@@ -12,7 +12,7 @@
 
 실시간 AI 대시보드 바로가기
 본 프로젝트의 XGBoost 예측 엔진을 활용한 실시간 위험도 시뮬레이션 대시보드가 인터넷상에 배포되어 있습니다. 아래 링크를 통해 직접 테스트해 볼 수 있습니다.
-👉 [양산시 교통사고 위험도 예측 대시보드 바로가기](https://yangsan-traffic-risk-xgytxkbwe9a6bkspeaemb9.streamlit.app/)
+👉 [양산시 교통사고 위험도 예측 대시보드 바로가기](https://yangsan-traffic-risk-gheuv599appgwkiqv4mxbn6.streamlit.app/)
 ---
 
 ## 🏗 Directory Architecture
