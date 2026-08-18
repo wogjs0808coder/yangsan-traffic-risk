@@ -5,7 +5,7 @@
 
 ## 📝 상세 포트폴리오 및 트러블슈팅
 본 프로젝트의 상세한 기획 배경, 데이터 정합성 해결 과정, 그리고 900mm 강수량 이상치 트러블슈팅 등의 전체 과정은 아래 노션 블로그에 정리되어 있습니다.
-👉 [Notion 기술 블로그 바로가기]((https://fragrant-dewberry-Za3.notion.site/3c0294bdb6c580c394e1dfc48ae705a6?source=copy_link))
+👉 [Notion 기술 블로그 바로가기](https://fragrant-dewberry-Za3.notion.site/3c0294bdb6c580c394e1dfc48ae705a6?source=copy_link)
 
 ---
 
