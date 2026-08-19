@@ -19,15 +19,22 @@
 
 ```text
 yangsan-traffic-risk/
-├── data/
-│   ├── accident.csv          # 양산시 사고 이력 데이터 (UTF-8 인코딩)
-│   ├── weather.csv           # 양산시 일별 기상 데이터 (CP949 인코딩)
-│   └── 요일별_시간대별_교통사고.csv # 요일/시간대별 통계 템플릿 (CP949 인코딩)
-├── notebooks/
-│   └── 01_outlier_analysis.ipynb # 900mm 이상 강수량 모델 편향 원인 분석 및 EDA
-├── src/
-│   ├── data_loader.py        # 파일별 이종 인코딩 처리 및 메모리 최적화 로더
-│   ├── preprocessor.py       # 시계열 정합성 일치(Daily-Monthly Join) 및 강수량 이상치 클리핑
-│   └── model_trainer.py      # XGBoost / LightGBM 기반 다중 분류(Multi-class) 모델 학습
-├── requirements.txt          # 개발 환경 의존성 (pandas, scikit-learn, xgboost)
-└── README.md
+├── data/                       # 원본 데이터 보관함 (변경 금지)
+│   ├── accident.csv            # 양산시 사고 이력 (발생년월 기준)
+│   └── weather.csv             # 양산시 기상 데이터 (일별 기준)
+│
+├── data_processed/                          # 모델 학습용 정제 데이터 및 산출물
+│   ├── X_train.csv, X_test.csv           # 분할된 피처 데이터 (80:20)
+│   ├── y_train.csv, y_test.csv            # 분할된 Target 데이터
+│   ├── classes.csv                               # LabelEncoder 클래스 매핑 정보
+│   └── xgboost_traffic_model.json # 최종 학습 완료된 모델 가중치
+│
+├── src/                                     # 핵심 파이프라인 순서대로
+│   ├── data_loader.py           # [1단계] cp949 인코딩 처리 및 데이터 로드
+│   ├── preprocessor.py        # [2단계] 결측치/이상치 처리, 시계열 병합(Join)
+│   └── model_trainer.py        # [3단계] XGBoost 학습 및 json 파일 저장
+│
+├── app.py                              # Streamlit 웹 대시보드 구동 스크립트
+├── requirements.txt            # Streamlit Cloud 배포용 패키지 목록
+├── README.md                   
+└── .gitignore                         # venv/, data/ 등 업로드 제외 목록
