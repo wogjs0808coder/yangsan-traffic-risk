@@ -1,6 +1,8 @@
 # yangsan-traffic-risk
 # 🚦 양산시 교통사고 예측 및 안전 가이드 프로젝트
 
+다음 버전(V2) 제작중: [yangsan-traffic-risk-v2](https://github.com/wogjs0808coder/yangsan-traffic-risk-v2)
+
 > 기상 시계열 데이터와 운전자 프로필을 융합한 개인화 위험도 예측 파이프라인 구축
 
 본 프로젝트는 양산시의 실제 교통사고 이력(`accident.csv`)과 기상 데이터(`weather.csv`)를 결합하여, 실시간 기상 상태와 운전자 속성(차종, 연령대)에 따른 사고 위험도 및 위반 유발 원인을 예측하는 머신러닝 시스템입니다. 단순 위험 예측을 넘어 AI 모델 학습 과정에서의 기상 데이터 편향(Data Bias)을 도메인 지식으로 Troubleshooting한 과정을 담고 있습니다.
